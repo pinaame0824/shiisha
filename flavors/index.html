@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavor Collection | L'Amis Shisha Lounge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .flavor-header {
+            padding: 12rem 0 4rem;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0), var(--bg-color));
+        }
+
+        .flavor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 8rem;
+        }
+
+        .flavor-category {
+            background: var(--bg-darker);
+            border: 1px solid var(--glass-border);
+            padding: 2.5rem;
+            transition: var(--transition-smooth);
+        }
+
+        .flavor-category:hover {
+            border-color: var(--accent-color);
+        }
+
+        .category-title {
+            font-family: var(--font-heading);
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .flavor-list {
+            list-style: none;
+        }
+
+        .flavor-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .flavor-name {
+            font-weight: 500;
+        }
+
+        .flavor-tag {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        .back-nav {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            z-index: 100;
+        }
+
+        .back-nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 0.1rem;
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 0.4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back-nav">
+        <a href="/#menu">← BACK TO LOUNGE</a>
+    </div>
+
+    <header class="flavor-header">
+        <div class="container">
+            <span class="section-label">Our Collection</span>
+            <h1 class="section-title">揺らめく香りの、全ラインナップ。</h1>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                世界中から集めた100種類以上のフレーバーから、今お薦めの20数種をピックアップ。<br>
+                ミックスの相談も承ります。
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="flavor-grid">
+            <!-- Fruit Selection -->
+            <div class="flavor-category reveal">
+                <h2 class="category-title">Fruits</h2>
+                <ul class="flavor-list">
+                    <li class="flavor-item"><span class="flavor-name">ダブルアップル</span><span
+                            class="flavor-tag">Classic</span></li>
+                    <li class="flavor-item"><span class="flavor-name">ブルーミスト</span><span
+                            class="flavor-tag">Popular</span></li>
+                    <li class="flavor-item"><span class="flavor-name">ゴールデン・グレープ</span><span
+                            class="flavor-tag">Sweet</span></li>
+                    <li class="flavor-item"><span class="flavor-name">ホワイト・ピーチ</span><span
+                            class="flavor-tag">Fresh</span></li>
+                    <li class="flavor-item"><span class="flavor-name">スイカ</span><span class="flavor-tag">Juicy</span>
+                    </li>
+                    <li class="flavor-item"><span class="flavor-name">シトラス・レモン</span><span
+                            class="flavor-tag">Sour</span></li>
+                    <li class="flavor-item"><span class="flavor-name">ワイルド・ベリー</span><span
+                            class="flavor-tag">Acid</span></li>
+                </ul>
+            </div>
+
+            <!-- Dessert Selection -->
+            <div class="flavor-category reveal" style="transition-delay: 0.1s;">
+                <h2 class="category-title">Dessert & Sweet</h2>
+                <ul class="flavor-list">
+                    <li class="flavor-item"><span class="flavor-name">バニラ・ドリーム</span><span
+                            class="flavor-tag">Creamy</span></li>
+                    <li class="flavor-item"><span class="flavor-name">スパイス・チャイ</span><span
+                            class="flavor-tag">Spicy</span></li>
+                    <li class="flavor-item"><span class="flavor-name">ミルク・チョコレート</span><span
+                            class="flavor-tag">Rich</span></li>
+                    <li class="flavor-item"><span class="flavor-name">塩キャラメル</span><span
+                            class="flavor-tag">Salted</span></li>
+                    <li class="flavor-item"><span class="flavor-name">ハニー・ココナッツ</span><span
+                            class="flavor-tag">Tropical</span></li>
+                    <li class="flavor-item"><span class="flavor-name">ピスタチオ</span><span class="flavor-tag">Nutty</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Floral & Tea -->
+            <div class="flavor-category reveal" style="transition-delay: 0.2s;">
+                <h2 class="category-title">Floral & Tea</h2>
+                <ul class="flavor-list">
+                    <li class="flavor-item"><span class="flavor-name">アールグレイ・スペシャル</span><span
+                            class="flavor-tag">Tea</span></li>
+                    <li class="flavor-item"><span class="flavor-name">ジャスミン・ブロッサム</span><span
+                            class="flavor-tag">Elegant</span></li>
+                    <li class="flavor-item"><span class="flavor-name">ローズ・ガーデン</span><span
+                            class="flavor-tag">Noble</span></li>
+                    <li class="flavor-item"><span class="flavor-name">ラベンダー・ピース</span><span
+                            class="flavor-tag">Relax</span></li>
+                    <li class="flavor-item"><span class="flavor-name">レモングラス</span><span class="flavor-tag">Herb</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Special & Spice -->
+            <div class="flavor-category reveal" style="transition-delay: 0.3s;">
+                <h2 class="category-title">Special & Spice</h2>
+                <ul class="flavor-list">
+                    <li class="flavor-item"><span class="flavor-name">パンラズナ</span><span
+                            class="flavor-tag">Traditional</span></li>
+                    <li class="flavor-item"><span class="flavor-name">カルダモン・ブラスト</span><span
+                            class="flavor-tag">Kick</span></li>
+                    <li class="flavor-item"><span class="flavor-name">ミント・ガム</span><span class="flavor-tag">Cool</span>
+                    </li>
+                    <li class="flavor-item"><span class="flavor-name">スーパー・フリーズ</span><span class="flavor-tag">Extra
+                            Cold</span></li>
+                    <li class="flavor-item"><span class="flavor-name">シナモン・ロール</span><span class="flavor-tag">Deep
+                            Spice</span></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content text-center">
+            <p class="copyright">&copy; 2026 L'Amis Shisha Lounge. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

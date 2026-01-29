@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation | L'Amis Shisha Lounge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .reserve-section {
+            padding: 12rem 0 8rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .reserve-form-container {
+            width: 100%;
+            max-width: 700px;
+            background: var(--bg-darker);
+            border: 1px solid var(--glass-border);
+            padding: 4rem;
+            position: relative;
+        }
+
+        .reserve-form-container::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 1px;
+            background: var(--accent-color);
+        }
+
+        .form-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            letter-spacing: 0.2rem;
+        }
+
+        .form-group {
+            margin-bottom: 2.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--accent-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            color: white;
+            padding: 1rem;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.5rem;
+            background: var(--accent-color);
+            color: var(--bg-color);
+            border: none;
+            font-family: var(--font-body);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            margin-top: 2rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+            filter: brightness(1.1);
+        }
+
+        .back-link {
+            margin-top: 3rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 0.1rem;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--accent-color);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .reserve-form-container {
+                padding: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <span class="loader-text">L'Amis</span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <main class="reserve-section">
+        <div class="container text-center" style="margin-bottom: 4rem;">
+            <span class="section-label">Online Reservation</span>
+            <h1 class="post-title">お席のご予約</h1>
+        </div>
+
+        <div class="reserve-form-container reveal">
+            <form id="reservation-form">
+                <div class="form-group">
+                    <label class="form-label">Name / お名前</label>
+                    <input type="text" class="form-input" placeholder="Your Full Name" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Phone / 電話番号</label>
+                        <input type="tel" class="form-input" placeholder="000-0000-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">People / 人数</label>
+                        <select class="form-select" required>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5+">5+ People (Contact us)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Date / ご来店日</label>
+                        <input type="date" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Time / ご希望時間</label>
+                        <input type="time" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Message / ご要望</label>
+                    <textarea class="form-textarea" rows="4"
+                        placeholder="バースデープレート、苦手なフレーバー、その他ご要望はこちらにご記入ください。"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit-btn">Reserve Now</button>
+            </form>
+        </div>
+
+        <a href="/" class="back-link">← BACK TO TOP</a>
+    </main>
+
+    <script type="module">
+        // Basic Interaction
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 800);
+            }, 1000);
+        });
+
+        const reveal = document.querySelector('.reveal');
+        setTimeout(() => reveal.classList.add('active'), 500);
+
+        document.getElementById('reservation-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submit-btn');
+            btn.textContent = 'Processing...';
+            btn.style.opacity = '0.7';
+            btn.style.pointerEvents = 'none';
+
+            setTimeout(() => {
+                alert('ありがとうございます。ご予約を承りました。後ほど、スタッフより確認のお電話を差し上げます。');
+                window.location.href = '/';
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>

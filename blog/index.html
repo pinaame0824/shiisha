@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal | L'Amis Shisha Lounge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .blog-header {
+            padding: 15rem 0 5rem;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.5), var(--bg-color));
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 4rem;
+            margin-bottom: 10rem;
+        }
+
+        .blog-card {
+            background: var(--bg-darker);
+            border: 1px solid var(--glass-border);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .blog-img {
+            height: 250px;
+            background: #1a1a1a;
+            position: relative;
+        }
+
+        .blog-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, rgba(212, 175, 55, 0.1), transparent);
+        }
+
+        .blog-body {
+            padding: 2.5rem;
+        }
+
+        .blog-date {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            letter-spacing: 0.1rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .blog-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            margin-top: auto;
+            color: var(--accent-color);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+        }
+
+        .back-to-home {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            z-index: 1001;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 0.1rem;
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/" class="back-to-home">← BACK TO HOME</a>
+
+    <header class="blog-header">
+        <div class="container">
+            <span class="section-label">Journal</span>
+            <h1 class="section-title">煙とともに紡ぐ、物語。</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="blog-grid">
+            <a href="/blog/posts/post-1.html" class="blog-card reveal">
+                <div class="blog-img" style="background-image: url('../assets/hero.png'); background-size: cover;">
+                </div>
+                <div class="blog-body">
+                    <span class="blog-date">2026.01.28</span>
+                    <h2 class="blog-title">はじめてのシーシャ：煙と向き合う贅沢な時間</h2>
+                    <p class="blog-excerpt">
+                        シーシャは単なる煙の味を愉しむものではありません。深く息を吸い込み、ゆっくりと吐き出す。その「呼吸」のプロセスそのものが、忙しない日常に句読点を打ってくれます。
+                    </p>
+                    <span class="read-more">Read More</span>
+                </div>
+            </a>
+
+            <a href="/blog/posts/post-2.html" class="blog-card reveal" style="transition-delay: 0.1s;">
+                <div class="blog-img" style="background: linear-gradient(45deg, #111, #333);"></div>
+                <div class="blog-body">
+                    <span class="blog-date">2026.01.20</span>
+                    <h2 class="blog-title">今月のスペシャルフレーバー：真夜中の薔薇ができるまで</h2>
+                    <p class="blog-excerpt">
+                        当店で最も愛されている「Midnight Rose」。この高貴な香りを生み出すために、数千回のパッキングテストを行いました。今回はその開発秘話を少しだけご紹介します。
+                    </p>
+                    <span class="read-more">Read More</span>
+                </div>
+            </a>
+
+            <a href="/blog/posts/post-3.html" class="blog-card reveal" style="transition-delay: 0.2s;">
+                <div class="blog-img" style="background: linear-gradient(45deg, #222, #000);"></div>
+                <div class="blog-body">
+                    <span class="blog-date">2026.01.12</span>
+                    <h2 class="blog-title">シーシャをより美味しく楽しむための、3つの秘訣</h2>
+                    <p class="blog-excerpt">
+                        お家や他店では味わえない「L'Amisの濃密な煙」。実は吸い方一つでその味わいは劇的に変わります。初心者から上級者まで知っておきたいコツとは。
+                    </p>
+                    <span class="read-more">Read More</span>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">L'Amis</div>
+            <p class="copyright">&copy; 2026 L'Amis Shisha Lounge. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
