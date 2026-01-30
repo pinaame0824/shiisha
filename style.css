@@ -29,49 +29,13 @@ body {
   overflow-x: hidden;
 }
 
-/* Loader */
+/* Loader removed */
 .loader {
-  position: fixed;
-  inset: 0;
-  background: var(--bg-darker);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  transition: opacity 0.8s ease;
-}
-
-.loader-content {
-  text-align: center;
-}
-
-.loader-text {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  letter-spacing: 0.5rem;
-  color: var(--accent-color);
-  display: block;
-  margin-bottom: 20px;
-  animation: pulse 2s infinite ease-in-out;
-}
-
-.loader-bar {
-  width: 100px;
-  height: 2px;
-  background: var(--glass-border);
-  position: relative;
-  margin: 0 auto;
+  display: none !important;
 }
 
 .loader-bar::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 0%;
-  background: var(--accent-color);
-  animation: load 1.5s ease-out forwards;
+  display: none;
 }
 
 @keyframes load {
@@ -242,46 +206,13 @@ body {
 }
 
 .cta-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+  transform: translateY(-3px);
+  filter: brightness(1.1);
 }
 
+/* .scroll-indicator removed */
 .scroll-indicator {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  opacity: 0;
-  animation: fadeIn 1s forwards 3s;
-}
-
-.scroll-indicator span {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-}
-
-.indicator-line {
-  width: 1px;
-  height: 60px;
-  background: var(--glass-border);
-  position: relative;
-  overflow: hidden;
-}
-
-.indicator-line::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: var(--accent-color);
-  animation: scrollDown 2s infinite;
+  display: none;
 }
 
 /* Sections */
@@ -520,7 +451,6 @@ body {
 
 .journal-mini-card:hover {
   border-color: var(--accent-color);
-  transform: translateY(-5px);
 }
 
 .mini-card-img {
@@ -737,14 +667,13 @@ body {
 
 /* Animations */
 .reveal {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
+  opacity: 1;
+  transform: none;
 }
 
 .reveal.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 @keyframes fadeInUp {

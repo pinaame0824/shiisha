@@ -81,15 +81,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6. Smoke-like Cursor Effect (Optional Premium touch)
-    // シンプルなマウスストーカーの代わりとして、ホバー時の微細な動き
-    const cta = document.querySelector('.cta-button');
-    cta.addEventListener('mousemove', (e) => {
-        const { left, top, width, height } = cta.getBoundingClientRect();
-        const x = (e.clientX - left) / width;
-        const y = (e.clientY - top) / height;
-
-        cta.style.setProperty('--x', x);
-        cta.style.setProperty('--y', y);
-    });
 });
