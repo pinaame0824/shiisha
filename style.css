@@ -709,15 +709,98 @@ body {
   }
 }
 
-/* Mobile Responsive */
+/* Responsive Header & Hamburger */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2000;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 1px;
+  background: var(--accent-color);
+  transition: transform 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-darker);
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+.mobile-nav li {
+  margin: 1.5rem 0;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+/* Mobile Responsive Adjustments */
 @media (max-width: 968px) {
-  .nav-links {
+
+  .nav-links,
+  .pc-only {
     display: none;
   }
 
-  .concept-grid,
-  .menu-grid,
-  .access-grid {
+  .hamburger {
+    display: flex;
+  }
+
+  .section {
+    padding: 6rem 0;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  /* Concepts */
+  .concept-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -728,6 +811,47 @@ body {
 
   .glass-card {
     transform: none;
+    margin-top: -3rem;
     padding: 2rem;
   }
+
+  /* Menu */
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .menu-category {
+    padding: 2.5rem;
+  }
+
+  /* Access */
+  .access-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .map-container {
+    height: 300px;
+  }
 }
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .home-blog-img {
+    height: 200px;
+  }
+
+  .home-blog-content {
+    padding: 1.5rem;
+  }
+}
+
+/* Footer */

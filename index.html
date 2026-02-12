@@ -26,6 +26,7 @@
     <header class="header">
         <nav class="nav-container">
             <div class="logo">L'Amis</div>
+            <!-- PC用メニュー -->
             <ul class="nav-links">
                 <li><a href="#concept">Concept</a></li>
                 <li><a href="#menu">Menu</a></li>
@@ -34,8 +35,30 @@
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#access">Access</a></li>
             </ul>
-            <a href="/reserve/" class="reserve-btn">Reserve</a>
+            <div class="header-right">
+                <a href="/reserve/" class="reserve-btn pc-only">Reserve</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
+
+        <!-- スマホ用オーバーレイメニュー -->
+        <div class="mobile-menu" id="mobile-menu">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="#concept" class="mobile-link">Concept</a></li>
+                    <li><a href="#menu" class="mobile-link">Menu</a></li>
+                    <li><a href="#blog" class="mobile-link">Blog</a></li>
+                    <li><a href="#contact" class="mobile-link">Contact</a></li>
+                    <li><a href="#gallery" class="mobile-link">Gallery</a></li>
+                    <li><a href="#access" class="mobile-link">Access</a></li>
+                    <li style="margin-top: 2rem;"><a href="/reserve/" class="reserve-btn mobile-link">Reserve Now</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
