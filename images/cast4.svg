@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 250">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFE0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFACD;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="250" fill="url(#bg)" />
+  
+  <!-- Hair (Fluffy) -->
+  <circle cx="100" cy="90" r="60" fill="#DEB887" />
+  
+  <!-- Dress -->
+  <path d="M50,180 Q100,220 150,180 L150,250 L50,250 Z" fill="#333" />
+  <path d="M60,180 Q100,200 140,180 L140,250 L60,250 Z" fill="#FFF" />
+  <circle cx="100" cy="200" r="10" fill="#FFD700" /> <!-- Big button -->
+  
+  <!-- Face -->
+  <circle cx="100" cy="100" r="45" fill="#FFF0E0" />
+  
+  <!-- Eyes (Closed Happy) -->
+  <path d="M75,105 Q80,100 85,105" stroke="#333" stroke-width="2" fill="none" />
+  <path d="M115,105 Q120,100 125,105" stroke="#333" stroke-width="2" fill="none" />
+  
+  <!-- Mouth (Eating/Happy) -->
+  <path d="M95,125 Q100,135 105,125" stroke="#A0522D" stroke-width="2" fill="none" />
+  
+  <!-- Headband -->
+  <path d="M60,60 Q100,40 140,60" stroke="#FFF" stroke-width="15" fill="none" />
+  <path d="M140,60 Q150,50 160,60" fill="#FFD700" /> <!-- Crown bit -->
+  
+  <!-- Sweets -->
+  <circle cx="160" cy="190" r="15" fill="#FF69B4" /> 
+  <rect x="150" y="195" width="20" height="10" fill="#8B4513" /> <!-- Cupcake-ish -->
+</svg>

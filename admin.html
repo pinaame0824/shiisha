@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理者ダッシュボード | Magical Cafe ALICE</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Admin Specific Styles */
+        body {
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        .admin-navbar {
+            background: #333;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .admin-logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .admin-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .login-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .login-box {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #eee;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tab-btn {
+            background: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .tab-btn.active {
+            background: var(--accent-color);
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+        }
+
+        .data-table-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            display: none;
+        }
+
+        .data-table-container.active {
+            display: block;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .data-table th {
+            background: #f8f9fa;
+            font-weight: bold;
+            color: #666;
+        }
+
+        .data-table tr:hover {
+            background: #fff9fb;
+        }
+
+        .status-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .status-new {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .admin-footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .logout-btn {
+            background: none;
+            border: 1px solid #666;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Simple Login Screen -->
+    <div class="login-screen" id="loginScreen">
+        <div class="login-box">
+            <h2 style="margin-bottom: 1.5rem; color: var(--accent-color);">Admin Login</h2>
+            <div class="form-group">
+                <input type="password" id="adminPassword" placeholder="パスワードを入力 (demo)" style="margin-bottom: 1rem;">
+            </div>
+            <button class="btn btn-primary" onclick="checkLogin()" style="width: 100%;">ログイン</button>
+        </div>
+    </div>
+
+    <!-- Admin Navbar -->
+    <nav class="admin-navbar">
+        <div class="admin-logo">
+            <i class="fa-solid fa-crown" style="color: var(--secondary-color);"></i>
+            ALICE Admin
+        </div>
+        <button class="logout-btn" onclick="logout()">ログアウト</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="admin-container">
+
+        <div class="dashboard-header">
+            <h1>ダッシュボード</h1>
+            <p id="currentDate">2026.01.29</p>
+        </div>
+
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="switchTab('inquiries')">
+                <i class="fa-solid fa-envelope"></i> お問い合わせ
+            </button>
+            <button class="tab-btn" onclick="switchTab('applications')">
+                <i class="fa-solid fa-heart"></i> メイド応募
+            </button>
+        </div>
+
+        <!-- Inquiries Table -->
+        <div id="inquiries" class="data-table-container active">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>日時</th>
+                        <th>お名前</th>
+                        <th>メールアドレス</th>
+                        <th>種別</th>
+                        <th>メッセージ</th>
+                        <th>ステータス</th>
+                    </tr>
+                </thead>
+                <tbody id="inquiriesBody">
+                    <!-- Data will be inserted here by JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Applications Table -->
+        <div id="applications" class="data-table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>日時</th>
+                        <th>お名前</th>
+                        <th>年齢</th>
+                        <th>メール / 電話番号</th>
+                        <th>経験</th>
+                        <th>志望動機</th>
+                    </tr>
+                </thead>
+                <tbody id="applicationsBody">
+                    <!-- Data will be inserted here by JS -->
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <footer class="admin-footer">
+        &copy; 2024 Magical Cafe ALICE Admin System
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

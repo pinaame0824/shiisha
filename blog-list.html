@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メイド日誌（ブログ）一覧 | Magical Cafe ALICE</title>
+    <meta name="description" content="Magical Cafe ALICEのメイド日誌（ブログ）一覧ページです。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        .page-header {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            text-align: center;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe4e9 50%, #fff9fb 100%);
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .back-link {
+            margin-top: 3rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floating Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-crown"></i></span>
+                Alice
+            </a>
+            <div class="nav-links">
+                <a href="index.html#concept" data-i18n="nav_concept">Concept</a>
+                <a href="index.html#guide" data-i18n="nav_guide">Guide</a>
+                <a href="index.html#cast" data-i18n="nav_cast">Cast</a>
+                <a href="index.html#system" data-i18n="nav_system">System</a>
+                <a href="index.html#events" data-i18n="nav_events">Events</a>
+                <a href="index.html#blog" data-i18n="nav_blog">Blog</a>
+                <a href="index.html#access" data-i18n="nav_access">Access</a>
+                <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+            </div>
+            <div class="nav-controls">
+                <button class="lang-switch" id="langSwitch" aria-label="Switch Language">
+                    <span class="lang-text">JP/EN</span>
+                    <i class="fa-solid fa-globe"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-nav-overlay"></div>
+    <div class="mobile-nav">
+        <a href="index.html#concept" data-i18n="nav_concept">Concept</a>
+        <a href="index.html#guide" data-i18n="nav_guide">Guide</a>
+        <a href="index.html#cast" data-i18n="nav_cast">Cast</a>
+        <a href="index.html#system" data-i18n="nav_system">System</a>
+        <a href="index.html#events" data-i18n="nav_events">Events</a>
+        <a href="index.html#blog" data-i18n="nav_blog">Blog</a>
+        <a href="index.html#access" data-i18n="nav_access">Access</a>
+        <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+    </div>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1 class="page-title" data-i18n="blog_list_title">メイド日誌（ブログ）一覧</h1>
+        <p data-i18n="blog_list_p">お屋敷での日常や最新情報をメイドたちが綴ります♪</p>
+    </header>
+
+    <!-- Blog Section -->
+    <section class="section blog-section" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="blog-grid">
+                
+                <!-- Blog Post 1 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/meru_debut.jpg" alt="新人デビュー" class="blog-img-portrait" onerror="this.src='https://via.placeholder.com/400x300?text=No+Image';">
+                        <div class="blog-category">NEWS</div>
+                    </div>
+                    <div class="blog-info">
+                        <time datetime="2026-04-20" class="blog-date">2026.04.20</time>
+                        <h3 class="blog-title">新人の「める」ちゃんがお給仕デビューしました！✨</h3>
+                        <p class="blog-excerpt">
+                            皆さま、はじめまして！新しくアリスのメイドに加わった「める」です💕
+                            昨日は緊張のお給仕デビューでしたが、ご主人様たちが温かく迎えてくださって...
+                        </p>
+                        <a href="blog-meru.html" class="blog-more">詳しく見る <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/strawberry_parfait.jpg" alt="限定メニュー" onerror="this.src='https://via.placeholder.com/400x300?text=No+Image';">
+                        <div class="blog-category">MENU</div>
+                    </div>
+                    <div class="blog-info">
+                        <time datetime="2026-04-15" class="blog-date">2026.04.15</time>
+                        <h3 class="blog-title">期間限定！いちごパフェ🍓が大好評です♪</h3>
+                        <p class="blog-excerpt">
+                            今月限定の「魔法のストロベリーパフェ」が大人気！
+                            契約農家さんから届いた甘酸っぱいいちごを贅沢に使って、メイドが愛情込めて...
+                        </p>
+                        <a href="blog-strawberry.html" class="blog-more">詳しく見る <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/valentine_event.jpg" alt="イベント特報" class="blog-img-portrait" onerror="this.src='https://via.placeholder.com/400x300?text=No+Image';">
+                        <div class="blog-category">EVENT</div>
+                    </div>
+                    <div class="blog-info">
+                        <time datetime="2026-04-10" class="blog-date">2026.04.10</time>
+                        <h3 class="blog-title">【イベント報告】春の特別お見送り会、ありがとうございました💕</h3>
+                        <p class="blog-excerpt">
+                            先週末に開催した春のプレイベント、たくさんのご帰宅本当にありがとうございました！
+                            メイドたちの特別衣装はいかがでしたか？みんなで撮った...
+                        </p>
+                        <a href="blog-valentine.html" class="blog-more">詳しく見る <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://via.placeholder.com/400x300?text=Tea+Time" alt="ティータイム">
+                        <div class="blog-category">DAILY</div>
+                    </div>
+                    <div class="blog-info">
+                        <time datetime="2026-04-05" class="blog-date">2026.04.05</time>
+                        <h3 class="blog-title">新しい紅茶の茶葉が入荷しました☕️</h3>
+                        <p class="blog-excerpt">
+                            いつもご帰宅ありがとうございます！本日は新しい紅茶のご紹介です。
+                            ダージリンの最高級茶葉が届きました。香り高く、スイーツとの相性も抜群です...
+                        </p>
+                        <a href="#" class="blog-more">詳しく見る <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://via.placeholder.com/400x300?text=Game+Event" alt="ゲーム大会">
+                        <div class="blog-category">EVENT</div>
+                    </div>
+                    <div class="blog-info">
+                        <time datetime="2026-04-01" class="blog-date">2026.04.01</time>
+                        <h3 class="blog-title">第1回アリスボードゲーム大会のお知らせ🎲</h3>
+                        <p class="blog-excerpt">
+                            ご主人様、お嬢様、お待たせいたしました！
+                            以前からご要望の多かったボードゲーム大会をついに開催することが決定しました...
+                        </p>
+                        <a href="#" class="blog-more">詳しく見る <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+            
+            <div class="back-link">
+                <a href="index.html" class="btn btn-outline" data-i18n="btn_top"><i class="fa-solid fa-arrow-left"></i> トップページへ戻る</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <i class="fa-solid fa-crown"></i>
+                Magical Cafe ALICE
+            </div>
+            <div class="footer-links">
+                <a href="terms-of-service.html" data-i18n="footer_terms">利用規約</a>
+                <a href="privacy-policy.html" data-i18n="footer_privacy">プライバシーポリシー</a>
+            </div>
+            <p class="copyright">&copy; 2024 Magical Cafe ALICE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE4E9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFF0F5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg-gradient)"/>
+  
+  <!-- Sparkles -->
+  <text x="100" y="80" font-size="30" fill="#FFD700">✨</text>
+  <text x="680" y="120" font-size="25" fill="#FFD700">✨</text>
+  <text x="400" y="50" font-size="35" fill="#FFD700">✨</text>
+  <text x="150" y="500" font-size="20" fill="#FFB7C5">💕</text>
+  <text x="650" y="480" font-size="20" fill="#FFB7C5">💕</text>
+  
+  <!-- Maid 1 (Left - Pink Hair) -->
+  <g transform="translate(150, 200)">
+    <!-- Dress -->
+    <path d="M50,180 Q80,250 120,180 L120,350 L50,350 Z" fill="#333"/>
+    <path d="M60,180 Q85,230 110,180 L110,350 L60,350 Z" fill="#FFF"/>
+    <!-- Apron ribbon -->
+    <circle cx="85" cy="200" r="8" fill="#FFB7C5"/>
+    
+    <!-- Body/Arms -->
+    <ellipse cx="60" cy="160" rx="15" ry="25" fill="#FFE0BD"/>
+    <ellipse cx="110" cy="160" rx="15" ry="25" fill="#FFE0BD"/>
+    
+    <!-- Waving Hand -->
+    <ellipse cx="40" cy="140" rx="12" ry="15" fill="#FFE0BD"/>
+    <path d="M35,130 L30,115 M40,128 L38,110 M45,130 L48,115" stroke="#FFE0BD" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Face -->
+    <circle cx="85" cy="100" r="50" fill="#FFE0BD"/>
+    
+    <!-- Hair (Pink) -->
+    <path d="M35,90 Q85,20 135,90 Q85,40 35,90" fill="#FFB7C5"/>
+    <ellipse cx="35" cy="100" rx="20" ry="35" fill="#FFB7C5"/>
+    <ellipse cx="135" cy="100" rx="20" ry="35" fill="#FFB7C5"/>
+    
+    <!-- Maid Headband -->
+    <path d="M50,60 Q85,40 120,60 L115,50 Q85,30 55,50 Z" fill="#FFF"/>
+    <circle cx="50" cy="60" r="6" fill="#FFB7C5"/>
+    <circle cx="120" cy="60" r="6" fill="#FFB7C5"/>
+    
+    <!-- Eyes -->
+    <ellipse cx="70" cy="100" rx="8" ry="12" fill="#333"/>
+    <ellipse cx="100" cy="100" rx="8" ry="12" fill="#333"/>
+    <circle cx="72" cy="98" r="3" fill="#FFF"/>
+    <circle cx="102" cy="98" r="3" fill="#FFF"/>
+    
+    <!-- Blush -->
+    <ellipse cx="55" cy="110" rx="8" ry="5" fill="#FFB7C5" opacity="0.5"/>
+    <ellipse cx="115" cy="110" rx="8" ry="5" fill="#FFB7C5" opacity="0.5"/>
+    
+    <!-- Smile -->
+    <path d="M75,120 Q85,130 95,120" stroke="#FF69B4" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Hearts -->
+    <text x="10" y="180" font-size="25" fill="#FF69B4">💖</text>
+  </g>
+  
+  <!-- Maid 2 (Center - Brown Hair, Peace Sign) -->
+  <g transform="translate(320, 180)">
+    <!-- Dress -->
+    <path d="M50,180 Q80,250 120,180 L120,370 L50,370 Z" fill="#333"/>
+    <path d="M60,180 Q85,230 110,180 L110,370 L60,370 Z" fill="#FFF"/>
+    <circle cx="85" cy="200" r="8" fill="#87CEEB"/>
+    
+    <!-- Arms -->
+    <ellipse cx="60" cy="160" rx="15" ry="25" fill="#FFE0BD"/>
+    <ellipse cx="110" cy="160" rx="15" ry="25" fill="#FFE0BD"/>
+    
+    <!-- Peace Sign Hand -->
+    <ellipse cx="120" cy="130" rx="12" ry="15" fill="#FFE0BD"/>
+    <path d="M115,120 L112,100 M125,120 L128,100" stroke="#FFE0BD" stroke-width="5" stroke-linecap="round"/>
+    
+    <!-- Face -->
+    <circle cx="85" cy="100" r="52" fill="#FFE0BD"/>
+    
+    <!-- Hair (Brown - Twin Tails) -->
+    <path d="M33,85 Q85,15 137,85 Q85,35 33,85" fill="#8B4513"/>
+    <!-- Twin tails -->
+    <path d="M30,100 Q10,150 20,220" stroke="#8B4513" stroke-width="25" fill="none"/>
+    <path d="M140,100 Q160,150 150,220" stroke="#8B4513" stroke-width="25" fill="none"/>
+    <circle cx="20" cy="220" r="15" fill="#8B4513"/>
+    <circle cx="150" cy="220" r="15" fill="#8B4513"/>
+    
+    <!-- Ribbons on twin tails -->
+    <circle cx="30" cy="100" r="8" fill="#87CEEB"/>
+    <circle cx="140" cy="100" r="8" fill="#87CEEB"/>
+    
+    <!-- Maid Headband -->
+    <path d="M48,55 Q85,35 122,55 L117,45 Q85,25 53,45 Z" fill="#FFF"/>
+    
+    <!-- Eyes (Closed happy) -->
+    <path d="M65,95 Q70,90 75,95" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M95,95 Q100,90 105,95" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Blush -->
+    <ellipse cx="55" cy="110" rx="10" ry="6" fill="#FFB7C5" opacity="0.6"/>
+    <ellipse cx="115" cy="110" rx="10" ry="6" fill="#FFB7C5" opacity="0.6"/>
+    
+    <!-- Big Smile -->
+    <path d="M70,120 Q85,135 100,120" stroke="#FF69B4" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Stars -->
+    <text x="140" y="110" font-size="30" fill="#FFD700">⭐</text>
+  </g>
+  
+  <!-- Maid 3 (Right - Blonde Hair) -->
+  <g transform="translate(520, 210)">
+    <!-- Dress -->
+    <path d="M50,180 Q80,250 120,180 L120,340 L50,340 Z" fill="#333"/>
+    <path d="M60,180 Q85,230 110,180 L110,340 L60,340 Z" fill="#FFF"/>
+    <circle cx="85" cy="200" r="8" fill="#DDA0DD"/>
+    
+    <!-- Arms (Welcoming gesture) -->
+    <ellipse cx="60" cy="160" rx="15" ry="25" fill="#FFE0BD"/>
+    <ellipse cx="110" cy="160" rx="15" ry="25" fill="#FFE0BD"/>
+    
+    <!-- Hands together -->
+    <ellipse cx="85" cy="180" rx="18" ry="12" fill="#FFE0BD"/>
+    
+    <!-- Face -->
+    <circle cx="85" cy="100" r="48" fill="#FFE0BD"/>
+    
+    <!-- Hair (Blonde - Short) -->
+    <path d="M37,90 Q85,25 133,90 Q85,40 37,90" fill="#F0E68C"/>
+    <ellipse cx="40" cy="95" rx="18" ry="30" fill="#F0E68C"/>
+    <ellipse cx="130" cy="95" rx="18" ry="30" fill="#F0E68C"/>
+    
+    <!-- Maid Headband -->
+    <path d="M50,62 Q85,42 120,62 L115,52 Q85,32 55,52 Z" fill="#FFF"/>
+    <circle cx="50" cy="62" r="6" fill="#DDA0DD"/>
+    <circle cx="120" cy="62" r="6" fill="#DDA0DD"/>
+    
+    <!-- Eyes -->
+    <ellipse cx="70" cy="100" rx="7" ry="11" fill="#333"/>
+    <ellipse cx="100" cy="100" rx="7" ry="11" fill="#333"/>
+    <circle cx="72" cy="98" r="3" fill="#FFF"/>
+    <circle cx="102" cy="98" r="3" fill="#FFF"/>
+    
+    <!-- Blush -->
+    <ellipse cx="55" cy="110" rx="8" ry="5" fill="#FFB7C5" opacity="0.5"/>
+    <ellipse cx="115" cy="110" rx="8" ry="5" fill="#FFB7C5" opacity="0.5"/>
+    
+    <!-- Gentle Smile -->
+    <path d="M75,118 Q85,125 95,118" stroke="#FF69B4" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Sparkles -->
+    <text x="-10" y="170" font-size="20" fill="#DDA0DD">✨</text>
+  </g>
+  
+  <!-- Bottom decorations -->
+  <text x="250" y="560" font-size="40" fill="#FFB7C5">💕</text>
+  <text x="500" y="570" font-size="35" fill="#FFD700">⭐</text>
+  <text x="370" y="580" font-size="30" fill="#87CEEB">✨</text>
+</svg>

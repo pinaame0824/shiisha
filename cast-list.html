@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キャスト一覧 | Magical Cafe ALICE</title>
+    <meta name="description" content="Magical Cafe ALICEのキャスト一覧ページです。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        .page-header {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            text-align: center;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe4e9 50%, #fff9fb 100%);
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .back-link {
+            margin-top: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floating Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-crown"></i></span>
+                Alice
+            </a>
+            <div class="nav-links">
+                <a href="index.html#concept" data-i18n="nav_concept">Concept</a>
+                <a href="index.html#guide" data-i18n="nav_guide">Guide</a>
+                <a href="index.html#cast" data-i18n="nav_cast">Cast</a>
+                <a href="index.html#system" data-i18n="nav_system">System</a>
+                <a href="index.html#events" data-i18n="nav_events">Events</a>
+                <a href="index.html#blog" data-i18n="nav_blog">Blog</a>
+                <a href="index.html#access" data-i18n="nav_access">Access</a>
+                <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+            </div>
+            <div class="nav-controls">
+                <button class="lang-switch" id="langSwitch" aria-label="Switch Language">
+                    <span class="lang-text">JP/EN</span>
+                    <i class="fa-solid fa-globe"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-nav-overlay"></div>
+    <div class="mobile-nav">
+        <a href="index.html#concept" data-i18n="nav_concept">Concept</a>
+        <a href="index.html#guide" data-i18n="nav_guide">Guide</a>
+        <a href="index.html#cast" data-i18n="nav_cast">Cast</a>
+        <a href="index.html#system" data-i18n="nav_system">System</a>
+        <a href="index.html#events" data-i18n="nav_events">Events</a>
+        <a href="index.html#blog" data-i18n="nav_blog">Blog</a>
+        <a href="index.html#access" data-i18n="nav_access">Access</a>
+        <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+    </div>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1 class="page-title" data-i18n="cast_list_title">キャスト一覧</h1>
+        <p data-i18n="cast_list_p">個性豊かなメイドたちが皆様のお帰りをお待ちしております♪</p>
+    </header>
+
+    <!-- Cast Section -->
+    <section class="section cast-section">
+        <div class="container">
+            <div class="cast-grid">
+                
+                <!-- Cast 1 -->
+                <div class="cast-card">
+                    <img src="images/cast1.jpg" alt="りな" class="cast-image">
+                    <div class="cast-info">
+                        <h3 class="cast-name">りな</h3>
+                        <p class="cast-role">店長メイド</p>
+                        <div class="cast-tags">
+                            <span>#ツンデレ</span>
+                            <span>#アニメ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cast 2 -->
+                <div class="cast-card">
+                    <img src="images/cast2.jpg" alt="める" class="cast-image">
+                    <div class="cast-info">
+                        <h3 class="cast-name">める</h3>
+                        <p class="cast-role">新人メイド</p>
+                        <div class="cast-tags">
+                            <span>#癒し系</span>
+                            <span>#歌</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cast 3 -->
+                <div class="cast-card">
+                    <img src="images/cast3.jpg" alt="こはく" class="cast-image">
+                    <div class="cast-info">
+                        <h3 class="cast-name">こはく</h3>
+                        <p class="cast-role">魔法使い</p>
+                        <div class="cast-tags">
+                            <span>#小悪魔</span>
+                            <span>#ダンス</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cast 4 -->
+                <div class="cast-card">
+                    <img src="images/cast4.jpg" alt="ゆめ" class="cast-image">
+                    <div class="cast-info">
+                        <h3 class="cast-name">ゆめ</h3>
+                        <p class="cast-role">お姫様</p>
+                        <div class="cast-tags">
+                            <span>#天然</span>
+                            <span>#お菓子</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cast 5 -->
+                <div class="cast-card">
+                    <img src="images/cast_sample.jpg" alt="みんと" class="cast-image">
+                    <div class="cast-info">
+                        <h3 class="cast-name">みんと</h3>
+                        <p class="cast-role">妖精</p>
+                        <div class="cast-tags">
+                            <span>#元気</span>
+                            <span>#ゲーム</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cast 6 -->
+                <div class="cast-card">
+                    <img src="images/cast_sample.jpg" alt="しずく" class="cast-image">
+                    <div class="cast-info">
+                        <h3 class="cast-name">しずく</h3>
+                        <p class="cast-role">堕天使</p>
+                        <div class="cast-tags">
+                            <span>#クール</span>
+                            <span>#カメラ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cast 7 -->
+                <div class="cast-card">
+                    <img src="images/cast_sample.jpg" alt="あぽろ" class="cast-image">
+                    <div class="cast-info">
+                        <h3 class="cast-name">あぽろ</h3>
+                        <p class="cast-role">うさぎメイド</p>
+                        <div class="cast-tags">
+                            <span>#甘えん坊</span>
+                            <span>#ピンク</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cast 8 -->
+                <div class="cast-card">
+                    <img src="images/cast_sample.jpg" alt="るる" class="cast-image">
+                    <div class="cast-info">
+                        <h3 class="cast-name">るる</h3>
+                        <p class="cast-role">魔法少女</p>
+                        <div class="cast-tags">
+                            <span>#ドジっ子</span>
+                            <span>#お絵描き</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cast 9 -->
+                <div class="cast-card">
+                    <img src="images/cast_sample.jpg" alt="きらら" class="cast-image">
+                    <div class="cast-info">
+                        <h3 class="cast-name">きらら</h3>
+                        <p class="cast-role">星の精霊</p>
+                        <div class="cast-tags">
+                            <span>#おしゃべり</span>
+                            <span>#キラキラ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cast 10 -->
+                <div class="cast-card">
+                    <img src="images/cast_sample.jpg" alt="のあ" class="cast-image">
+                    <div class="cast-info">
+                        <h3 class="cast-name">のあ</h3>
+                        <p class="cast-role">ケットシー</p>
+                        <div class="cast-tags">
+                            <span>#マイペース</span>
+                            <span>#お昼寝</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="back-link">
+                <a href="index.html" class="btn btn-outline" data-i18n="btn_top"><i class="fa-solid fa-arrow-left"></i> トップページへ戻る</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <i class="fa-solid fa-crown"></i>
+                Magical Cafe ALICE
+            </div>
+            <div class="footer-links">
+                <a href="terms-of-service.html" data-i18n="footer_terms">利用規約</a>
+                <a href="privacy-policy.html" data-i18n="footer_privacy">プライバシーポリシー</a>
+            </div>
+            <p class="copyright">&copy; 2024 Magical Cafe ALICE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用規約 | Magical Cafe ALICE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .legal-content {
+            padding: 8rem 2rem 4rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .legal-box {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        .legal-box h1 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .legal-box h2 {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin: 2rem 0 1rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+        }
+        .legal-box p, .legal-box li {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+        .legal-box ul {
+            padding-left: 1.5rem;
+        }
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-crown"></i></span>
+                Alice
+            </a>
+            <div class="nav-controls">
+                <button class="lang-switch" id="langSwitch" aria-label="Switch Language">
+                    <span class="lang-text">JP/EN</span>
+                    <i class="fa-solid fa-globe"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="legal-content">
+        <div class="legal-box">
+            <h1 data-i18n="terms_title">利用規約</h1>
+            <p data-i18n="terms_intro">Magical Cafe ALICE（以下「当店」）をご利用いただく際は、本規約に同意したものとみなします。すべてのご主人様・お嬢様に魔法の時間をお楽しみいただくため、以下のルールを遵守してください。</p>
+
+            <h2 data-i18n="terms_s1_title">第1条（目的）</h2>
+            <p data-i18n="terms_s1_desc">本規約は、当店のサービスを安全かつ快適にご利用いただくための基本的なルールを定めるものです。</p>
+
+            <h2 data-i18n="terms_s2_title">第2条（入店およびご利用）</h2>
+            <ul>
+                <li data-i18n="terms_s2_li1">当店はコンセプトカフェであり、メイドによる給仕を楽しむ場所です。</li>
+                <li data-i18n="terms_s2_li2">他のお客様の迷惑となる行為、または当店の運営を妨げる行為は禁止します。</li>
+            </ul>
+
+            <h2 data-i18n="terms_s3_title">第3条（禁止事項）</h2>
+            <p data-i18n="terms_s3_desc">お客様は、以下の行為を行ってはなりません。</p>
+            <ul>
+                <li data-i18n="terms_s3_li1">キャストに対する過度な接触、公序良俗に反する言動、ハラスメント。</li>
+                <li data-i18n="terms_s3_li2">キャストの連絡先を聞き出す行為、またはプライベートで会おうとする行為。</li>
+                <li data-i18n="terms_s3_li3">許可された場場所でのキャストおよび店内の撮影、録音。</li>
+                <li data-i18n="terms_s3_li4">他のお客様やキャストのプライバシーを侵害する行為。</li>
+                <li data-i18n="terms_s3_li5">暴力行為、泥酔状態での入店。</li>
+            </ul>
+
+            <h2 data-i18n="terms_s4_title">第4条（利用の中止）</h2>
+            <p data-i18n="terms_s4_desc">本規約に違反した場合、当店の判断により直ちにご利用を中止し、退店していただく場合があります。その際、料金の返金は行いません。また、悪質な場合は以降の出入りを禁止いたします。</p>
+
+            <h2 data-i18n="terms_s5_title">第5条（免責事項）</h2>
+            <ul>
+                <li data-i18n="terms_s5_li1">店内での紛失、盗難、お客様同士のトラブルについて、当店は一切の責任を負いかねます。</li>
+                <li data-i18n="terms_s5_li2">やむを得ない事情により営業内容を変更・中止する場合があります。</li>
+            </ul>
+
+            <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> <span data-i18n="btn_top">トップページに戻る</span></a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">&copy; 2024 Magical Cafe ALICE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

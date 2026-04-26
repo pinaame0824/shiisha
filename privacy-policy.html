@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー | Magical Cafe ALICE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .legal-content {
+            padding: 8rem 2rem 4rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .legal-box {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        .legal-box h1 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .legal-box h2 {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin: 2rem 0 1rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+        }
+        .legal-box p, .legal-box li {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-crown"></i></span>
+                Alice
+            </a>
+            <div class="nav-controls">
+                <button class="lang-switch" id="langSwitch" aria-label="Switch Language">
+                    <span class="lang-text">JP/EN</span>
+                    <i class="fa-solid fa-globe"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="legal-content">
+        <div class="legal-box">
+            <h1 data-i18n="privacy_title">プライバシーポリシー</h1>
+            <p data-i18n="privacy_intro">Magical Cafe ALICE（以下「当店」）は、お客様の個人情報を適切に保護することが社会的責務であると考え、以下の通りプライバシーポリシーを定め、運用いたします。</p>
+
+            <h2 data-i18n="privacy_s1_title">1. 個人情報の取得</h2>
+            <p data-i18n="privacy_s1_desc">当店は、お問い合わせフォーム、採用応募フォーム、ご予約等を通じて、適法かつ公正な手段によってお客様の個人情報（氏名、メールアドレス、電話番号等）を収集いたします。</p>
+
+            <h2 data-i18n="privacy_s2_title">2. 個人情報の利用目的</h2>
+            <p data-i18n="privacy_s2_desc">収集した個人情報は、以下の目的のためにのみ利用いたします。</p>
+            <ul>
+                <li data-i18n="privacy_s2_li1">お問い合わせへの回答および資料の送付</li>
+                <li data-i18n="privacy_s2_li2">採用選考および採用合否の連絡</li>
+                <li data-i18n="privacy_s2_li3">ご予約の確認およびサービスの提供</li>
+                <li data-i18n="privacy_s2_li4">当店からの重要なお知らせの送信</li>
+            </ul>
+
+            <h2 data-i18n="privacy_s3_title">3. 第三者への提供</h2>
+            <p data-i18n="privacy_s3_desc">当店は、法令に基づく場合を除き、お客様の同意を得ることなく個人情報を第三者に提供することはありません。</p>
+
+            <h2 data-i18n="privacy_s4_title">4. 個人情報の管理</h2>
+            <p data-i18n="privacy_s4_desc">当店は、個人情報の漏洩、紛失、改ざん等を防ぐため、適切なセキュリティ対策を講じ、厳重に管理いたします。</p>
+
+            <h2 data-i18n="privacy_s5_title">5. 個人情報の照会・訂正・削除</h2>
+            <p data-i18n="privacy_s5_desc">お客様ご本人から個人情報の照会、訂正、削除等の希望があった場合は、ご本人であることを確認した上で、速やかに対応いたします。</p>
+
+            <h2 data-i18n="privacy_s6_title">6. お問い合わせ窓口</h2>
+            <p data-i18n="privacy_s6_desc">当店の個人情報の取扱いに関するお問い合わせは、お問い合わせフォームよりご連絡ください。</p>
+
+            <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> <span data-i18n="btn_top">トップページに戻る</span></a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">&copy; 2024 Magical Cafe ALICE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
